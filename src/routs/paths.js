@@ -1,6 +1,8 @@
-export default paths = {
+const paths = {
   home: '/',
   movies: 'movies/:id',
-  cast: 'movies/:id/cast',
-  reviews: 'movies/:id/reviews',
+  cast: 'cast',
+  reviews: 'reviews',
 };
+
+export default paths;
