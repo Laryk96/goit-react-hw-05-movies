@@ -18,7 +18,11 @@ const Home = () => {
   }, []);
   return (
     <div>
-      <MainTitle>Trending today</MainTitle>
+      {status === 'Loading' ? (
+        <MainTitle>Loading...</MainTitle>
+      ) : (
+        <MainTitle>Trending today</MainTitle>
+      )}
 
       <MovieList movies={movies} />
     </div>

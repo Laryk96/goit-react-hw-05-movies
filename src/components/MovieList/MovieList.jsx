@@ -1,4 +1,5 @@
 import MovieItem from 'components/MovieItem/MovieItem';
+
 import { PopularMovieList } from './MovieList.styled';
 
 const MovieList = ({ movies }) => {

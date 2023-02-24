@@ -1,3 +1,4 @@
+import MoreInfo from 'components/MoreInfo/MoreInfo';
 import {
   Article,
   Descriotion,
@@ -8,7 +9,7 @@ import {
 } from './MovieInfo.styled';
 
 const MovieInfo = ({ movie }) => {
-  return (
+  <>
     <Article>
       <ImageWrapper>
         <img src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`} />
@@ -26,7 +27,8 @@ const MovieInfo = ({ movie }) => {
         <Descriotion>{movie.genres.map(({ name }) => name)}</Descriotion>
       </Wrapper>
     </Article>
-  );
+    <MoreInfo />
+  </>;
 };
 
 export default MovieInfo;

@@ -1,9 +1,10 @@
 const paths = {
-  home: '/goit-react-hw-05-movies/',
+  home: '/',
   movies: 'movies/',
-  movie: 'movies/:id',
+  movieID: 'movies/:id',
   cast: 'cast',
   reviews: 'reviews',
+  error: '*',
 };
 
 export default paths;

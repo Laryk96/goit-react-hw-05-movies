@@ -1,9 +1,6 @@
 import { MovieLinkStyle, PopularMovieItem } from './MovieItem.styled';
 
-const { Link } = require('react-router-dom');
-
 const MovieItem = ({ movie }) => {
-  console.log(movie);
   return (
     <PopularMovieItem>
       <MovieLinkStyle to={`movies/${movie.id}`}>

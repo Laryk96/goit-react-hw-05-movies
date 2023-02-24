@@ -1,9 +1,11 @@
+import { Button, Form, Input } from './SearchMovie.styled';
+
 const SearchMovie = ({ onSubmit }) => {
   return (
-    <form onSubmit={onSubmit}>
-      <input name="search" type="text" placeholder="What will we look for" />
-      <button type="submit">Search</button>
-    </form>
+    <Form onSubmit={onSubmit}>
+      <Input name="search" type="text" placeholder="What will we look for" />
+      <Button type="submit">Search</Button>
+    </Form>
   );
 };
 

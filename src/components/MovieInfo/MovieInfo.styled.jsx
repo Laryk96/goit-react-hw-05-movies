@@ -7,7 +7,10 @@ const Article = styled.article`
   margin-bottom: 30px;
 `;
 
-const ImageWrapper = styled.div``;
+const ImageWrapper = styled.div`
+  border-radius: 10px;
+  overflow: hidden;
+`;
 
 const Wrapper = styled.div`
   margin-top: 50px;
