@@ -1,14 +1,13 @@
-import { Link } from 'react-router-dom';
+import MovieItem from 'components/MovieItem/MovieItem';
+import { PopularMovieList } from './MovieList.styled';
 
 const MovieList = ({ movies }) => {
   return (
-    <ul>
+    <PopularMovieList>
       {movies.map(movie => (
-        <Link key={movie.id} to={`movies/${movie.id}`}>
-          {movie.title}
-        </Link>
+        <MovieItem key={movie.id} movie={movie} />
       ))}
-    </ul>
+    </PopularMovieList>
   );
 };
 

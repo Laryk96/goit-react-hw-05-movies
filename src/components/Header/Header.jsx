@@ -13,10 +13,14 @@ const Header = () => {
       <Navigation>
         <NavigationList>
           <li>
-            <NavLinkStyled to={home}>Home</NavLinkStyled>
+            <NavLinkStyled to={home} end>
+              Home
+            </NavLinkStyled>
           </li>
           <li>
-            <NavLinkStyled to={movies}>Movies</NavLinkStyled>
+            <NavLinkStyled to={movies} end>
+              Movies
+            </NavLinkStyled>
           </li>
         </NavigationList>
       </Navigation>
