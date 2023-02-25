@@ -9,7 +9,8 @@ const Wrapper = styled.div`
 
 const Title = styled.h2`
   color: white;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.7;
   text-align: center;
   margin-bottom: 15px;
 `;
@@ -32,4 +33,13 @@ const InfoLinkStyled = styled(Link)`
   color: black;
   border-radius: 6px;
 `;
-export { Wrapper, Title, InfoList, InfoLinkStyled };
+
+const Item = styled.li`
+  transition: transform 100ms ease-in;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+`;
+export { Wrapper, Title, InfoList, InfoLinkStyled, Item };

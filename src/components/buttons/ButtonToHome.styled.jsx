@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const ButtonToHomePage = styled(Link)`
   position: absolute;
-  top: 100px;
+  top: 90px;
   display: inline-block;
   padding: 6px;
 
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.666;
   background-color: #212121;
   color: white;

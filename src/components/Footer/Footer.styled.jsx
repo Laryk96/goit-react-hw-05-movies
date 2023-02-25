@@ -1,7 +1,6 @@
 import styled from '@emotion/styled';
 
 const PageFooter = styled.footer`
-  position: fixed;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -15,6 +14,7 @@ const PageFooter = styled.footer`
 const Text = styled.p`
   color: orange;
   font-size: 18px;
+  line-height: 1.7;
 `;
 
 const List = styled.ul`

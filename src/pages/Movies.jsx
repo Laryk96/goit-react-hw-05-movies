@@ -1,14 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Outlet, useParams } from 'react-router-dom';
 import ButtonToHome from 'components/buttons/ButtonToHome';
-import MoreInfo from 'components/MoreInfo/MoreInfo';
-import MovieInfo from 'components/MovieInfo/MovieInfo';
-import { getMoviesByName, MovieInfoById } from 'services/moviesAPI';
+import { getMoviesByName } from 'services/moviesAPI';
 import SearchMovie from 'components/SearchMovie/SearchMovie';
 import MovieList from 'components/MovieList/MovieList';
 
 const Movies = () => {
-  const { id } = useParams();
   const [movie, setMovie] = useState({});
   const [status, setStatus] = useState('idle');
   const [title, setTitle] = useState('');
@@ -36,6 +32,7 @@ const Movies = () => {
 
     const search = event.target.elements.search.value;
     setTitle(search);
+    event.currentTarget.reset();
   };
 
   return (

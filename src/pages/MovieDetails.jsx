@@ -1,8 +1,8 @@
+import ButtonToHome from 'components/buttons/ButtonToHome';
+import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { MovieInfoById } from 'services/moviesAPI';
-
-const { default: MovieInfo } = require('components/MovieInfo/MovieInfo');
 
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
@@ -31,7 +31,12 @@ const MovieDetails = () => {
   }
 
   if (status === 'fulfilled') {
-    return <MovieInfo movie={movie} />;
+    return (
+      <>
+        <ButtonToHome>Go to back</ButtonToHome>
+        <MovieInfo movie={movie} />;
+      </>
+    );
   }
 };
 

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderNav = styled.header`
   background-color: #212121;
-  margin-bottom: 25px;
+  margin-bottom: 60px;
 `;
 
 const Navigation = styled.nav`
@@ -19,6 +19,10 @@ const NavigationList = styled.ul`
 `;
 
 const NavLinkStyled = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
   font-size: 18px;
   line-height: 1.666;
   color: white;
@@ -27,5 +31,11 @@ const NavLinkStyled = styled(NavLink)`
   &.active {
     color: orange;
   }
+
+  transition: transform 80ms ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
+
 export { HeaderNav, NavigationList, NavLinkStyled, Navigation };

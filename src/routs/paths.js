@@ -1,6 +1,6 @@
 const paths = {
   home: '/',
-  movies: 'movies/',
+  movies: 'movies',
   movieID: 'movies/:id',
   cast: 'cast',
   reviews: 'reviews',

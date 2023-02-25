@@ -1,3 +1,4 @@
+import { FaHome, FaFilm } from 'react-icons/fa';
 import paths from 'routs/paths.js';
 import {
   HeaderNav,
@@ -13,13 +14,15 @@ const Header = () => {
       <Navigation>
         <NavigationList>
           <li>
-            <NavLinkStyled to={home} end>
-              Home
+            <NavLinkStyled to={home}>
+              <FaHome />
+              <p> Home</p>
             </NavLinkStyled>
           </li>
           <li>
-            <NavLinkStyled to={movies} end>
-              Movies
+            <NavLinkStyled to={movies}>
+              <FaFilm />
+              <p> Movies</p>
             </NavLinkStyled>
           </li>
         </NavigationList>

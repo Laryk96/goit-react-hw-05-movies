@@ -1,5 +1,11 @@
 import paths from 'routs/paths';
-import { Wrapper, Title, InfoList, InfoLinkStyled } from './MoreInfo.styled';
+import {
+  Wrapper,
+  Title,
+  InfoList,
+  InfoLinkStyled,
+  Item,
+} from './MoreInfo.styled';
 
 const { cast, reviews } = paths;
 
@@ -8,12 +14,12 @@ const MoreInfo = () => {
     <Wrapper>
       <Title>Additional information</Title>
       <InfoList>
-        <li>
+        <Item>
           <InfoLinkStyled to={cast}>Cast</InfoLinkStyled>
-        </li>
-        <li>
+        </Item>
+        <Item>
           <InfoLinkStyled to={reviews}>Reviews</InfoLinkStyled>
-        </li>
+        </Item>
       </InfoList>
     </Wrapper>
   );
