@@ -7,7 +7,7 @@ const HeaderNav = styled.header`
 `;
 
 const Navigation = styled.nav`
-  padding: 25px 40px;
+  padding: 20px 40px;
 `;
 
 const NavigationList = styled.ul`
@@ -22,19 +22,22 @@ const NavLinkStyled = styled(NavLink)`
   display: flex;
   align-items: center;
   gap: 5px;
-
-  font-size: 18px;
+  padding: 8px;
+  font-size: 16px;
   line-height: 1.666;
   color: white;
   text-decoration: none;
-
+  border-radius: 7px;
   &.active {
     color: orange;
   }
 
-  transition: transform 80ms ease-in;
+  transition: transform 80ms ease-in, background-color 80ms ease-in,
+    color 80ms ease-in;
   &:hover {
     transform: scale(1.1);
+    background-color: orange;
+    color: black;
   }
 `;
 
