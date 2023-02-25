@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;800&family=Golos+Text:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&family=Phudu:wght@400;500;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,9 +7,7 @@
 body {
   background-color: #FBFAF5;
   margin: 0;
-  font-family: 'Cormorant Upright', serif;
-
-  font-family: 'EB Garamond', serif;
+  font-family: 'Phudu', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

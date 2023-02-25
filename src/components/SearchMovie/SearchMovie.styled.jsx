@@ -36,7 +36,7 @@ const Input = styled.input`
 const Button = styled.button`
   width: 100px;
   height: 32px;
-  font-size: 22px;
+  font-size: 20px;
   border-radius: 5px;
   border: none;
   transition: background-color 150ms ease-in;
