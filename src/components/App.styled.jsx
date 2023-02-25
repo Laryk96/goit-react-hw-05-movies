@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   flex: 1;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
