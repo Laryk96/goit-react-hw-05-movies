@@ -1,7 +1,7 @@
 import ButtonToHome from 'components/buttons/ButtonToHome';
 import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { MovieInfoById } from 'services/moviesAPI';
 
 const MovieDetails = () => {
@@ -34,7 +34,8 @@ const MovieDetails = () => {
     return (
       <>
         <ButtonToHome>Go to back</ButtonToHome>
-        <MovieInfo movie={movie} />;
+        <MovieInfo movie={movie} />
+        <Outlet />
       </>
     );
   }

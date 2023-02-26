@@ -1,7 +1,7 @@
 import ButtonToHome from 'components/buttons/ButtonToHome';
 import { MainTitle } from 'components/Title/Title.styled';
 
-const Error = () => {
+const NotFound = () => {
   return (
     <div>
       <ButtonToHome>Go to back</ButtonToHome>
@@ -10,4 +10,4 @@ const Error = () => {
   );
 };
 
-export default Error;
+export default NotFound;

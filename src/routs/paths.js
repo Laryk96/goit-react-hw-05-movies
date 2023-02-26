@@ -1,5 +1,5 @@
 const paths = {
-  home: '/',
+  home: '/goit-react-hw-05-movies/',
   movies: 'movies',
   movieID: 'movies/:id',
   cast: 'cast',

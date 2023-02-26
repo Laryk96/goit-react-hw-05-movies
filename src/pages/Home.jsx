@@ -16,6 +16,7 @@ const Home = () => {
       .catch(error => console.log(error.message))
       .finally(() => setStatus('fulfilled'));
   }, []);
+
   return (
     <div>
       {status === 'Loading' ? (

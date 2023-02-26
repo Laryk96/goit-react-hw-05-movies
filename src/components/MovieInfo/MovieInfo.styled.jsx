@@ -6,6 +6,8 @@ const Article = styled.article`
   align-items: flex-end;
   gap: 40px;
   margin-bottom: 30px;
+  background-image: linear-gradient(to right, #434343 0%, black 120%);
+  border-radius: 10px;
 `;
 
 const ImageWrapper = styled.div`
@@ -15,7 +17,6 @@ const ImageWrapper = styled.div`
 
 const Wrapper = styled.div`
   width: 600px;
-  background-color: #212121;
   padding: 20px;
   border-radius: 5px;
 `;

@@ -15,7 +15,7 @@ const MovieInfo = ({ movie }) => {
         <ImageWrapper>
           <img
             alt={movie.title}
-            src={`https://image.tmdb.org/t/p/w400${movie.poster_path}`}
+            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
           />
         </ImageWrapper>
         <Wrapper>

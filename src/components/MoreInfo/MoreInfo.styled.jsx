@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
   padding: 15px;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   background-color: #212121;
   border-radius: 10px;
 `;

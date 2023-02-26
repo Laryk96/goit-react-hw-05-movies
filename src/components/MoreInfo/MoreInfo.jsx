@@ -15,10 +15,14 @@ const MoreInfo = () => {
       <Title>Additional information</Title>
       <InfoList>
         <Item>
-          <InfoLinkStyled to={cast}>Cast</InfoLinkStyled>
+          <InfoLinkStyled to={cast} replace>
+            Cast
+          </InfoLinkStyled>
         </Item>
         <Item>
-          <InfoLinkStyled to={reviews}>Reviews</InfoLinkStyled>
+          <InfoLinkStyled to={reviews} replace>
+            Reviews
+          </InfoLinkStyled>
         </Item>
       </InfoList>
     </Wrapper>

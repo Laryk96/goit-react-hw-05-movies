@@ -17,6 +17,9 @@ const Footer = () => {
         <li>
           <p>@react-icons</p>
         </li>
+        <li>
+          <p>@react-content-loader</p>
+        </li>
       </List>
     </PageFooter>
   );

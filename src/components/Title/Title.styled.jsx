@@ -1,4 +1,4 @@
-const { default: styled } = require('@emotion/styled');
+import styled from '@emotion/styled';
 
 const MainTitle = styled.h1`
   font-size: 40px;

@@ -3,8 +3,10 @@ import paths from 'routs/paths';
 import MainLayouts from 'Layouts/MainLayouts';
 import Home from 'pages/Home';
 import Movies from 'pages/Movies';
-import Error from 'pages/Error';
 import MovieDetails from 'pages/MovieDetails';
+import NotFound from 'pages/NotFound';
+import Cast from './Cast/Cast';
+import Reviews from './Reviews/Reviews';
 const { home, movies, movieID, cast, reviews, error } = paths;
 
 export const App = () => {
@@ -14,10 +16,10 @@ export const App = () => {
         <Route index element={<Home />} />
         <Route path={movies} element={<Movies />} />
         <Route path={movieID} element={<MovieDetails />}>
-          <Route path={cast} element={<h2>This is Cast</h2>} />
-          <Route path={reviews} element={<h2>This is Reviews</h2>} />
+          <Route path={cast} element={<Cast />} />
+          <Route path={reviews} element={<Reviews />} />
         </Route>
-        <Route path={error} element={<Error />} />
+        <Route path={error} element={<NotFound />} />
       </Route>
     </Routes>
   );

@@ -12,7 +12,7 @@ const { movieID } = paths;
 const MovieItem = ({ movie: { id, title, poster_path, original_name } }) => {
   return (
     <PopularMovieItem>
-      <MovieLinkStyle to={generatePath(movieID, { id })} n>
+      <MovieLinkStyle to={generatePath(movieID, { id })}>
         <Image
           alt={title}
           src={
