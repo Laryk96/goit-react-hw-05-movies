@@ -1,8 +1,12 @@
 import MovieList from 'components/MovieList/MovieList';
 import { MainTitle } from 'components/Title/Title.styled';
 import { useEffect, useState } from 'react';
-import { HomeLoader } from 'services/ContentLoader';
+import { MoviesLoader } from 'services/ContentLoader';
 import { getPopularMovies } from 'services/moviesAPI.js';
+
+const Loader = () => {
+  return MoviesLoader();
+};
 
 const Home = () => {
   const [status, setStatus] = useState('idle');
@@ -22,7 +26,7 @@ const Home = () => {
       {status === 'Loading' ? (
         <>
           <MainTitle>Loading...</MainTitle>
-          {HomeLoader()}
+          <Loader />
         </>
       ) : (
         <MainTitle>Trending today</MainTitle>

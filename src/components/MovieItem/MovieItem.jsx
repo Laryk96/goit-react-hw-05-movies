@@ -3,12 +3,12 @@ import paths from 'routs/paths';
 import { generatePath } from 'react-router-dom';
 import LinkWithLocation from 'components/LinkWithLocation/LinkWithLocation';
 
-const { movieID } = paths;
+const { movieIDForLink } = paths;
 
 const MovieItem = ({ movie: { id, title, poster_path, original_name } }) => {
   return (
     <PopularMovieItem>
-      <LinkWithLocation to={generatePath(movieID, { id })}>
+      <LinkWithLocation to={generatePath(movieIDForLink, { id })}>
         <Image
           alt={title}
           src={

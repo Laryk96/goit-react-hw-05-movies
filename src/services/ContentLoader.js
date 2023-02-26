@@ -1,6 +1,6 @@
 import ContentLoader from 'react-content-loader';
 
-const HomeLoader = () => {
+const MoviesLoader = () => {
   // Get values from props
   // const { rows, columns, coverHeight, coverWidth, padding, speed } = props;
 
@@ -81,4 +81,4 @@ const MovieLoader = () => {
   );
 };
 
-export { HomeLoader, MovieLoader };
+export { MoviesLoader, MovieLoader };

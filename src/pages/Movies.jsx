@@ -2,11 +2,15 @@ import { useEffect, useState } from 'react';
 import { getMoviesByName } from 'services/moviesAPI';
 import SearchMovie from 'components/SearchMovie/SearchMovie';
 import MovieList from 'components/MovieList/MovieList';
-import { HomeLoader } from 'services/ContentLoader';
+import { MoviesLoader } from 'services/ContentLoader';
 import { MainTitle } from 'components/Title/Title.styled';
 import { useSearchParams } from 'react-router-dom';
 import serializeFormQuery from 'services/updateSearchQuery';
 import { warning } from 'services/notification';
+
+const Loader = () => {
+  return MoviesLoader();
+};
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -53,13 +57,13 @@ const Movies = () => {
 
   return (
     <>
-      {status === 'loading' && (
+      {status === 'fulfilled' && (
         <>
           <MainTitle>Loading...</MainTitle>
-          {HomeLoader()}
+          <Loader />
         </>
       )}
-      {status !== 'fulfilled' && <SearchMovie onSubmit={handelSubmitForm} />}
+      <SearchMovie onSubmit={handelSubmitForm} />
       {status === 'found' && <MovieList movies={movie} />}
     </>
   );
