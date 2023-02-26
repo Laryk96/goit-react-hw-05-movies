@@ -1,7 +1,7 @@
 import MovieList from 'components/MovieList/MovieList';
 import { MainTitle } from 'components/Title/Title.styled';
-
 import { useEffect, useState } from 'react';
+import { HomeLoader } from 'services/ContentLoader';
 import { getPopularMovies } from 'services/moviesAPI.js';
 
 const Home = () => {
@@ -20,7 +20,10 @@ const Home = () => {
   return (
     <div>
       {status === 'Loading' ? (
-        <MainTitle>Loading...</MainTitle>
+        <>
+          <MainTitle>Loading...</MainTitle>
+          {HomeLoader()}
+        </>
       ) : (
         <MainTitle>Trending today</MainTitle>
       )}

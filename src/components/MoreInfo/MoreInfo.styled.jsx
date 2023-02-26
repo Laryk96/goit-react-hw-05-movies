@@ -1,18 +1,21 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
-  padding: 15px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   margin-bottom: 30px;
+
   background-color: #212121;
   border-radius: 10px;
 `;
 
 const Title = styled.h2`
+  margin-bottom: 20px;
+
   color: white;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.7;
   text-align: center;
-  margin-bottom: 15px;
 `;
 
 const InfoList = styled.ul`
@@ -28,8 +31,9 @@ const InfoLinkStyled = styled(Link)`
   align-items: center;
   justify-content: center;
   background-color: orange;
-  width: 80px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
+
   color: black;
   border-radius: 6px;
 `;

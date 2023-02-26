@@ -1,7 +1,9 @@
 import ButtonToHome from 'components/buttons/ButtonToHome';
 import MovieInfo from 'components/MovieInfo/MovieInfo';
 import { useEffect, useState } from 'react';
+import ContentLoader from 'react-content-loader';
 import { Outlet, useParams } from 'react-router-dom';
+import { MovieLoader } from 'services/ContentLoader';
 import { MovieInfoById } from 'services/moviesAPI';
 
 const MovieDetails = () => {
@@ -27,7 +29,7 @@ const MovieDetails = () => {
   }, [id]);
 
   if (status === 'loading') {
-    return <h1>Loading...</h1>;
+    return MovieLoader();
   }
 
   if (status === 'fulfilled') {

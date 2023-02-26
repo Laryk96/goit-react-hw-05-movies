@@ -22,13 +22,13 @@ const Wrapper = styled.div`
 `;
 
 const MovieTitle = styled.h2`
-  font-size: 34px;
+  font-size: 38px;
   line-height: 1.666;
   margin-bottom: 10px;
   color: orange;
 `;
 const SubTitle = styled.h3`
-  font-size: 28px;
+  font-size: 30px;
   line-height: 1.7;
   margin-bottom: 10px;
   color: orange;

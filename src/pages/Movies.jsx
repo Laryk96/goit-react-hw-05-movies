@@ -3,6 +3,8 @@ import ButtonToHome from 'components/buttons/ButtonToHome';
 import { getMoviesByName } from 'services/moviesAPI';
 import SearchMovie from 'components/SearchMovie/SearchMovie';
 import MovieList from 'components/MovieList/MovieList';
+import { HomeLoader } from 'services/ContentLoader';
+import { MainTitle } from 'components/Title/Title.styled';
 
 const Movies = () => {
   const [movie, setMovie] = useState({});
@@ -38,6 +40,12 @@ const Movies = () => {
   return (
     <>
       {status === 'found' && <ButtonToHome>Go back</ButtonToHome>}
+      {status === 'loading' && (
+        <>
+          <MainTitle>Loading...</MainTitle>
+          {HomeLoader()}
+        </>
+      )}
       {status !== 'fulfilled' && <SearchMovie onSubmit={handelSubmitForm} />}
       {status === 'found' && <MovieList movies={movie} />}
     </>
