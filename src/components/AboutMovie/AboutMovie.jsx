@@ -6,9 +6,9 @@ import {
   MovieTitle,
   SubTitle,
   Wrapper,
-} from './MovieInfo.styled';
+} from './AboutMovie.styled';
 
-const MovieInfo = ({ movie }) => {
+const AboutMovie = ({ movie }) => {
   return (
     <>
       <Article>
@@ -36,4 +36,4 @@ const MovieInfo = ({ movie }) => {
   );
 };
 
-export default MovieInfo;
+export default AboutMovie;

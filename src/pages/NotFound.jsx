@@ -1,4 +1,4 @@
-import ButtonToHome from 'components/buttons/ButtonToHome';
+import ButtonToHome from 'components/BackButton/BackButton';
 import { MainTitle } from 'components/Title/Title.styled';
 
 const NotFound = () => {

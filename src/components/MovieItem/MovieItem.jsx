@@ -1,18 +1,14 @@
-import {
-  Image,
-  MovieLinkStyle,
-  MovieTitle,
-  PopularMovieItem,
-} from './MovieItem.styled';
+import { Image, MovieTitle, PopularMovieItem } from './MovieItem.styled';
 import paths from 'routs/paths';
 import { generatePath } from 'react-router-dom';
+import LinkWithLocation from 'components/LinkWithLocation/LinkWithLocation';
 
 const { movieID } = paths;
 
 const MovieItem = ({ movie: { id, title, poster_path, original_name } }) => {
   return (
     <PopularMovieItem>
-      <MovieLinkStyle to={generatePath(movieID, { id })}>
+      <LinkWithLocation to={generatePath(movieID, { id })}>
         <Image
           alt={title}
           src={
@@ -23,7 +19,7 @@ const MovieItem = ({ movie: { id, title, poster_path, original_name } }) => {
           loading="lazy"
         />
         <MovieTitle>{title || original_name}</MovieTitle>
-      </MovieLinkStyle>
+      </LinkWithLocation>
     </PopularMovieItem>
   );
 };

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import ButtonToHome from 'components/buttons/ButtonToHome';
 import { getMoviesByName } from 'services/moviesAPI';
 import SearchMovie from 'components/SearchMovie/SearchMovie';
 import MovieList from 'components/MovieList/MovieList';
@@ -39,7 +38,6 @@ const Movies = () => {
 
   return (
     <>
-      {status === 'found' && <ButtonToHome>Go back</ButtonToHome>}
       {status === 'loading' && (
         <>
           <MainTitle>Loading...</MainTitle>

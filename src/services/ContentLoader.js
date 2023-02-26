@@ -1,6 +1,6 @@
 import ContentLoader from 'react-content-loader';
 
-const HomeLoader = props => {
+const HomeLoader = () => {
   // Get values from props
   // const { rows, columns, coverHeight, coverWidth, padding, speed } = props;
 
@@ -22,9 +22,8 @@ const HomeLoader = props => {
       speed={speed}
       width={columns * coverWidthWithPadding}
       height={rows * coverHeightWithPadding}
-      primaryColor="#242b34"
-      secondaryColor="#343d4c"
-      {...props}
+      // primaryColor="#242b34"
+      // secondaryColor="#343d4c"
     >
       <rect
         x="0"

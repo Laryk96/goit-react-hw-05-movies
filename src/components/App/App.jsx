@@ -5,8 +5,8 @@ import Home from 'pages/Home';
 import Movies from 'pages/Movies';
 import MovieDetails from 'pages/MovieDetails';
 import NotFound from 'pages/NotFound';
-import Cast from './Cast/Cast';
-import Reviews from './Reviews/Reviews';
+import Cast from '../Cast/Cast';
+import Reviews from '../Reviews/Reviews';
 const { home, movies, movieID, cast, reviews, error } = paths;
 
 export const App = () => {
