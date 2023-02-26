@@ -31,7 +31,6 @@ const Home = () => {
       ) : (
         <MainTitle>Trending today</MainTitle>
       )}
-
       <MovieList movies={movies} />
     </div>
   );
