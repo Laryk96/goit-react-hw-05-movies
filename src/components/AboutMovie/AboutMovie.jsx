@@ -1,4 +1,6 @@
 import MoreInfo from 'components/MoreInfo/MoreInfo';
+import { func } from 'prop-types';
+import getGenresList from 'services/getGenresList';
 import {
   Article,
   Description,
@@ -8,27 +10,38 @@ import {
   Wrapper,
 } from './AboutMovie.styled';
 
-const AboutMovie = ({ movie }) => {
+const AboutMovie = ({
+  movie: {
+    title,
+    poster_path,
+    release_date,
+    overview,
+    genres: tags,
+    vote_average,
+  },
+}) => {
+  const genres = getGenresList(tags);
+
   return (
     <>
       <Article>
         <ImageWrapper>
           <img
-            alt={movie.title}
-            src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+            alt={title}
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
           />
         </ImageWrapper>
         <Wrapper>
           <MovieTitle>
-            {movie.title} ({movie.release_date.slice(0, 4)})
+            {title} ({release_date.slice(0, 4)})
           </MovieTitle>
           <Description>
-            User Score: {Math.round(movie.vote_average * 10)}%
+            User Score: {Math.round(vote_average * 10)}%
           </Description>
           <SubTitle>Overview</SubTitle>
-          <Description>{movie.overview}</Description>
+          <Description>{overview}</Description>
           <SubTitle>Genres</SubTitle>
-          <Description>{movie.genres.map(({ name }) => name)}</Description>
+          <Description>{genres.map(genres => genres + ' ')}</Description>
         </Wrapper>
       </Article>
       <MoreInfo />
