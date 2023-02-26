@@ -1,5 +1,4 @@
 import MoreInfo from 'components/MoreInfo/MoreInfo';
-import { func } from 'prop-types';
 import getGenresList from 'services/getGenresList';
 import {
   Article,
