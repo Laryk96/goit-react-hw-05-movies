@@ -22,6 +22,7 @@ const HomeLoader = () => {
       speed={speed}
       width={columns * coverWidthWithPadding}
       height={rows * coverHeightWithPadding}
+      backgroundColor="#212121"
       // primaryColor="#242b34"
       // secondaryColor="#343d4c"
     >
@@ -60,7 +61,7 @@ const MovieLoader = () => {
       width={1300}
       height={700}
       viewBox="0 0 700 300"
-      backgroundColor="#f5f5f5"
+      backgroundColor="#212121"
       foregroundColor="#dbdbdb"
     >
       <rect x="4" y="8" rx="3" ry="3" width="7" height="288" />
