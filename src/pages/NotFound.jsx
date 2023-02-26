@@ -1,10 +1,10 @@
-import ButtonToHome from 'components/BackButton/BackButton';
+import BackButton from 'components/BackButton/BackButton';
 import { MainTitle } from 'components/Title/Title.styled';
 
 const NotFound = () => {
   return (
     <div>
-      <ButtonToHome>Go to back</ButtonToHome>
+      <BackButton isPageNotFound={true}>back to home</BackButton>
       <MainTitle>Oops page not found</MainTitle>
     </div>
   );

@@ -4,35 +4,50 @@ import SearchMovie from 'components/SearchMovie/SearchMovie';
 import MovieList from 'components/MovieList/MovieList';
 import { HomeLoader } from 'services/ContentLoader';
 import { MainTitle } from 'components/Title/Title.styled';
+import { useSearchParams } from 'react-router-dom';
+import serializeFormQuery from 'services/updateSearchQuery';
+import { warning } from 'services/notification';
 
 const Movies = () => {
-  const [movie, setMovie] = useState({});
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('query') ?? '';
+
+  const [movie, setMovie] = useState([]);
   const [status, setStatus] = useState('idle');
-  const [title, setTitle] = useState('');
 
   useEffect(() => {
-    if (!title) {
+    if (searchQuery === '') {
       return;
     }
 
     setStatus('loading');
 
-    getMoviesByName(title)
-      .then(({ data }) => setMovie(data.results))
+    getMoviesByName(searchQuery)
+      .then(({ data }) => {
+        if (data.total_pages <= 1) {
+          setStatus('notFound');
+          return warning(`Sorry we didn't find anything`);
+        }
+        setMovie(data.results);
+        setStatus('found');
+      })
       .catch(error => {
         setStatus('error');
         console.log(error.message);
-      })
-      .finally(() => {
-        setStatus('found');
       });
-  }, [title]);
+  }, [searchQuery]);
 
   const handelSubmitForm = event => {
     event.preventDefault();
+    const query = event.target.elements.search.value;
 
-    const search = event.target.elements.search.value;
-    setTitle(search);
+    if (query === '') {
+      warning('Weare sorry, but  you should enter some name in the search box');
+    }
+
+    const params = serializeFormQuery(query);
+
+    setSearchParams(params);
     event.currentTarget.reset();
   };
 

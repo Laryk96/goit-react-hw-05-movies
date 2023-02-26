@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from 'components/Header/Header';
 import { Container, Wrapper } from 'components/App/App.styled';
@@ -7,8 +8,11 @@ const MainLayouts = () => {
   return (
     <Wrapper>
       <Header />
+
       <Container>
-        <Outlet />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Outlet />
+        </Suspense>
       </Container>
       <Footer />
     </Wrapper>

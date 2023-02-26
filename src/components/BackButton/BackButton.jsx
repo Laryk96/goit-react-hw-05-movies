@@ -1,18 +1,29 @@
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaHome } from 'react-icons/fa';
 import { ButtonToHomePage } from './BackButton.styled';
 import { useLocation } from 'react-router-dom';
+import paths from 'routs/paths';
+const { home } = paths;
 
-const BackButton = ({ children }) => {
+const BackButton = ({ isPageNotFound, children }) => {
   const { state } = useLocation();
 
-  if (!state || !state.prevPage) return null;
+  if (isPageNotFound) {
+    return (
+      <ButtonToHomePage to={home}>
+        <FaHome />
+        <p>{children}</p>
+      </ButtonToHomePage>
+    );
+  }
 
-  return (
-    <ButtonToHomePage to={state.prevPage}>
-      <FaArrowLeft />
-      <p>{children}</p>
-    </ButtonToHomePage>
-  );
+  if (state || state.prevPage) {
+    return (
+      <ButtonToHomePage to={state.prevPage}>
+        <FaArrowLeft />
+        <p>{children}</p>
+      </ButtonToHomePage>
+    );
+  }
 };
 
 export default BackButton;
