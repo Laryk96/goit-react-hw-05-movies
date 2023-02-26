@@ -26,11 +26,10 @@ const Input = styled.input`
   background-color: #f0eeee;
 
   outline: none;
-  transition: transform 150ms ease-in;
+  transition: border 150ms ease-in;
   &:focus,
   &:hover {
     border: 2px solid orange;
-    transform: scale(1.05);
   }
 `;
 const Button = styled.button`
@@ -39,9 +38,10 @@ const Button = styled.button`
   font-size: 20px;
   border-radius: 5px;
   border: none;
-  transition: background-color 150ms ease-in;
+  transition: background-color 150ms ease-in, transform 150ms ease-in;
   &:hover {
     background-color: orange;
+    transform: scale(1.05);
   }
 `;
 

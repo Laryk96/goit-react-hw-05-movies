@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 const ButtonToHomePage = styled(Link)`
   position: absolute;
-  top: 90px;
-  display: inline-block;
-  padding: 6px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  top: 100px;
+  padding: 8px;
 
   font-size: 20px;
   line-height: 1.666;

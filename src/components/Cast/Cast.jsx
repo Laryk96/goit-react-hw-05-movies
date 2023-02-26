@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCast } from 'services/moviesAPI';
 import { CastImages, CastItem, CastList, Name } from './Cast.styled';
+
 const Cast = () => {
   const { id } = useParams();
   const [cast, setCast] = useState(null);

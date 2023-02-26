@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderNav = styled.header`
   background-color: #212121;
-  margin-bottom: 60px;
+  margin-bottom: 85px;
 `;
 
 const Navigation = styled.nav`
