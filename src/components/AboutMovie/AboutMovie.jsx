@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
 import MoreInfo from 'components/MoreInfo/MoreInfo';
 import getGenresList from 'services/getGenresList';
@@ -60,4 +61,4 @@ AboutMovie.propTypes = {
   }),
 };
 
-export default AboutMovie;
+export default memo(AboutMovie);

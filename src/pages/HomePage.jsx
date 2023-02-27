@@ -8,7 +8,7 @@ const Loader = () => {
   return MoviesLoader();
 };
 
-const Home = () => {
+const HomePage = () => {
   const [status, setStatus] = useState('idle');
   const [movies, setMovies] = useState([]);
 
@@ -36,4 +36,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

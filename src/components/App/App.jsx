@@ -4,12 +4,12 @@ import { lazy } from 'react';
 import MainLayouts from 'Layouts/MainLayouts';
 import paths from 'routs/paths';
 
-const Home = lazy(() => import('pages/Home'));
-const Movies = lazy(() => import('pages/Movies'));
-const MovieDetails = lazy(() => import('pages/MovieDetails'));
-const NotFound = lazy(() => import('pages/NotFound'));
-const Cast = lazy(() => import('../Cast/Cast'));
-const Reviews = lazy(() => import('../Reviews/Reviews'));
+const Home = lazy(() => import('pages/HomePage'));
+const Movies = lazy(() => import('pages/MoviesPage'));
+const MovieDetails = lazy(() => import('pages/MovieDetailsPage'));
+const NotFound = lazy(() => import('pages/NotFoundPage'));
+const Cast = lazy(() => import('components/Cast'));
+const Reviews = lazy(() => import('components/Reviews'));
 
 const { home, movies, movieID, cast, reviews, error } = paths;
 

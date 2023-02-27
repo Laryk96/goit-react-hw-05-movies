@@ -2,8 +2,8 @@ import { generatePath } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { Image, MovieTitle, PopularMovieItem } from './MovieItem.styled';
+import LinkWithLocation from 'components/LinkWithLocation';
 import paths from 'routs/paths';
-import LinkWithLocation from 'components/LinkWithLocation/LinkWithLocation';
 
 const { movieIDForLink } = paths;
 

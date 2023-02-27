@@ -1,8 +1,8 @@
-import BackButton from 'components/BackButton/BackButton';
+import BackButton from 'components/BackButton';
 import { MainTitle } from 'components/Title/Title.styled';
 import paths from 'routs/paths';
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <div>
       <BackButton to={paths.home}>back to home</BackButton>
@@ -11,4 +11,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

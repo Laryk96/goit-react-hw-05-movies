@@ -5,7 +5,7 @@ import { MovieLoader } from 'services/ContentLoader';
 import { MovieInfoById } from 'services/moviesAPI';
 import AboutMovie from 'components/AboutMovie/AboutMovie';
 
-const MovieDetails = () => {
+const MovieDetailsPage = () => {
   const [movie, setMovie] = useState({});
   const [status, setStatus] = useState('idle');
   const { id } = useParams();
@@ -41,4 +41,4 @@ const MovieDetails = () => {
   }
 };
 
-export default MovieDetails;
+export default MovieDetailsPage;

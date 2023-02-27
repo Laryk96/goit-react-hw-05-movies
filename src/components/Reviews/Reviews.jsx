@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+
 import { getMovieReviews } from 'services/moviesAPI';
 import {
   AuthorName,

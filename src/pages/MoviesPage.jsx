@@ -12,7 +12,7 @@ const Loader = () => {
   return MoviesLoader();
 };
 
-const Movies = () => {
+const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const searchQuery = searchParams.get('query') ?? '';
 
@@ -68,4 +68,4 @@ const Movies = () => {
     </>
   );
 };
-export default Movies;
+export default MoviesPage;
