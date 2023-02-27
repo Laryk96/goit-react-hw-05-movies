@@ -8,7 +8,6 @@ import AboutMovie from 'components/AboutMovie/AboutMovie';
 const MovieDetails = () => {
   const [movie, setMovie] = useState({});
   const [status, setStatus] = useState('idle');
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const MovieDetails = () => {
   if (status === 'fulfilled') {
     return (
       <>
-        <ButtonToHome>Go to back</ButtonToHome>
+        <ButtonToHome to={'/'}>Go to back</ButtonToHome>
         <AboutMovie movie={movie} />
         <Outlet />
       </>

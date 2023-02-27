@@ -22,8 +22,8 @@ const Cast = () => {
     return (
       <>
         <CastList>
-          {cast.map(({ id, name, profile_path }) => (
-            <CastItem key={id}>
+          {cast.map(({ id, name, profile_path }, index) => (
+            <CastItem key={index}>
               <CastImages
                 src={
                   profile_path
