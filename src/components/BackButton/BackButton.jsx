@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 import { ButtonToHomePage } from './BackButton.styled';
 const BackButton = ({ to, children }) => {
-  console.log(to);
   return (
     <ButtonToHomePage to={to}>
       <FaArrowLeft />
@@ -13,7 +12,7 @@ const BackButton = ({ to, children }) => {
 };
 
 BackButton.propTypes = {
-  isPageNotFound: PropTypes.bool,
+  to: PropTypes.string.isRequired,
 };
 
 export default BackButton;
