@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Button, Form, Input } from './SearchMovie.styled';
 
 const SearchMovie = ({ onSubmit }) => {
@@ -7,6 +9,10 @@ const SearchMovie = ({ onSubmit }) => {
       <Button type="submit">Search</Button>
     </Form>
   );
+};
+
+SearchMovie.propTypes = {
+  onSubmit: PropTypes.func,
 };
 
 export default SearchMovie;

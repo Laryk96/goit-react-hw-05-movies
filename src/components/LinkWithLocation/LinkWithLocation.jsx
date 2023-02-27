@@ -1,4 +1,6 @@
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import MovieLinkStyle from './LinkWithLocation.styled';
 
 const LinkWithLocation = prop => {
@@ -9,6 +11,10 @@ const LinkWithLocation = prop => {
       {children}
     </MovieLinkStyle>
   );
+};
+
+LinkWithLocation.propTypes = {
+  to: PropTypes.string,
 };
 
 export default LinkWithLocation;

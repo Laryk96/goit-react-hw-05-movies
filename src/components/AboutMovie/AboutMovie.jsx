@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import MoreInfo from 'components/MoreInfo/MoreInfo';
 import getGenresList from 'services/getGenresList';
 import {
@@ -20,7 +22,6 @@ const AboutMovie = ({
   },
 }) => {
   const genres = getGenresList(tags);
-
   return (
     <>
       <Article>
@@ -46,6 +47,17 @@ const AboutMovie = ({
       <MoreInfo />
     </>
   );
+};
+
+AboutMovie.propTypes = {
+  movie: PropTypes.shape({
+    title: PropTypes.string,
+    poster_path: PropTypes.string,
+    release_date: PropTypes.string,
+    overview: PropTypes.string,
+    genres: PropTypes.array,
+    vote_average: PropTypes.number,
+  }),
 };
 
 export default AboutMovie;

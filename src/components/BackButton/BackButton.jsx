@@ -1,6 +1,8 @@
 import { FaArrowLeft, FaHome } from 'react-icons/fa';
-import { ButtonToHomePage } from './BackButton.styled';
+import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
+
+import { ButtonToHomePage } from './BackButton.styled';
 import paths from 'routs/paths';
 const { home } = paths;
 
@@ -24,6 +26,10 @@ const BackButton = ({ isPageNotFound, children }) => {
       </ButtonToHomePage>
     );
   }
+};
+
+BackButton.propTypes = {
+  isPageNotFound: PropTypes.bool,
 };
 
 export default BackButton;

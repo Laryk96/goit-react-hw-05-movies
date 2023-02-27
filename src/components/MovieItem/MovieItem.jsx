@@ -1,6 +1,8 @@
+import { generatePath } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 import { Image, MovieTitle, PopularMovieItem } from './MovieItem.styled';
 import paths from 'routs/paths';
-import { generatePath } from 'react-router-dom';
 import LinkWithLocation from 'components/LinkWithLocation/LinkWithLocation';
 
 const { movieIDForLink } = paths;
@@ -22,6 +24,15 @@ const MovieItem = ({ movie: { id, title, poster_path, original_name } }) => {
       </LinkWithLocation>
     </PopularMovieItem>
   );
+};
+
+MovieItem.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.number,
+    title: PropTypes.string,
+    poster_path: PropTypes.string,
+    original_name: PropTypes.string,
+  }),
 };
 
 export default MovieItem;
