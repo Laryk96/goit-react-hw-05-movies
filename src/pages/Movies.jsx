@@ -46,7 +46,7 @@ const Movies = () => {
     const query = event.target.elements.search.value;
 
     if (query === '') {
-      warning('Weare sorry, but  you should enter some name in the search box');
+      warning(`we're sorry, but  you should enter some name in the search box`);
     }
 
     const params = serializeFormQuery(query);
