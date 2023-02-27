@@ -1,4 +1,4 @@
-import { FaArrowLeft, FaHome } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
 import { ButtonToHomePage } from './BackButton.styled';
